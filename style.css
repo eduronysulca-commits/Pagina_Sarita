@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+
+    background: #050403;
+
+    color: white;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   PANTALLAS
+========================= */
+
+.pantalla {
+
+    width: 100%;
+
+    height: 100vh;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 25%,
+            #4a350d,
+            #0d0904 48%,
+            #020202
+        );
+
+}
+
+
+.pantalla.activa {
+
+    display: flex;
+
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.tarjeta {
+
+    background:
+        rgba(15, 11, 6, .88);
+
+    border:
+        1px solid
+        rgba(255, 212, 59, .35);
+
+    border-radius: 28px;
+
+    padding: 45px 30px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.7);
+
+}
+
+
+/* =========================
+   FLOR
+========================= */
+
+.flor {
+
+    font-size: 75px;
+
+    margin-bottom: 20px;
+
+    animation:
+        flotar
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes flotar {
+
+    50% {
+
+        transform:
+            translateY(-10px)
+            rotate(4deg);
+
+    }
+
+}
+
+
+/* =========================
+   TEXTO PEQUEÑO
+========================= */
+
+.pequeno-titulo {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    color: #ffe895;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   TÍTULO PRINCIPAL
+========================= */
+
+h1 {
+
+    font-size:
+        clamp(
+            55px,
+            12vw,
+            115px
+        );
+
+    line-height: .85;
+
+    color: #ffd43b;
+
+    font-style: italic;
+
+    text-shadow:
+        0 0 35px
+        rgba(255,174,0,.35);
+
+}
+
+
+h1 span {
+
+    color: #ffe789;
+
+}
+
+
+h2 {
+
+    font-size:
+        clamp(
+            30px,
+            6vw,
+            58px
+        );
+
+    line-height: 1.1;
+
+    color: #ffe9a0;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   PÁRRAFOS
+========================= */
+
+p {
+
+    font-size:
+        clamp(
+            17px,
+            2.5vw,
+            22px
+        );
+
+    line-height: 1.7;
+
+    color: #f5edd9;
+
+}
+
+
+.mensaje {
+
+    margin-top: 30px;
+
+}
+
+
+.final {
+
+    font-size: 16px;
+
+    color: #ffe895;
+
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton {
+
+    margin-top: 30px;
+
+    padding:
+        15px
+        30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe978,
+            #ffae00
+        );
+
+    color: #241800;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 35px
+        rgba(255,174,0,.25);
+
+    transition: .3s;
+
+}
+
+
+.boton:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+}
+
+
+/* =========================
+   BOTÓN MÚSICA
+========================= */
+
+.boton-musica {
+
+    position: fixed;
+
+    top: 18px;
+
+    right: 18px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(20,15,7,.85);
+
+    border:
+        1px solid
+        rgba(255,226,123,.5);
+
+    color: #ffd43b;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 100;
+
+}
+
+
+/* =========================
+   FLECHA
+========================= */
+
+.flecha {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color: #ffd43b;
+
+    font-size: 28px;
+
+}
+
+
+/* =========================
+   PÉTALOS
+========================= */
+
+#petalos {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    overflow: hidden;
+
+}
+
+
+.petalo {
+
+    position: absolute;
+
+    top: -30px;
+
+    width: 12px;
+
+    height: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff19a,
+            #ffad00
+        );
+
+    border-radius:
+        100%
+        0
+        100%
+        0;
+
+    opacity: .8;
+
+    animation:
+        caer
+        linear
+        infinite;
+
+}
+
+
+@keyframes caer {
+
+    to {
+
+        transform:
+            translate3d(
+                var(--movimiento),
+                110vh,
+                0
+            )
+            rotate(540deg);
+
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 500px) {
+
+    .tarjeta {
+
+        padding:
+            35px
+            20px;
+
+    }
+
+
+    .flor {
+
+        font-size: 60px;
+
+    }
+
+}
+/* BOTONES DE LA PREGUNTA */
+
+.botones-respuesta {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+
+}
+
+
+.boton-si {
+
+    margin-top: 0;
+
+}
+
+
+.boton-no {
+
+    margin-top: 0;
+
+    background: transparent;
+
+    color: #ffe27b;
+
+    border: 1px solid #ffe27b;
+
+    box-shadow: none;
+
+}
+
+
+.boton-no:hover {
+
+    background: rgba(255, 212, 59, .08);
+
+}
+
+
+.respuesta-no {
+
+    margin-top: 18px;
+
+    font-size: 15px;
+
+    color: #ffe895;
+
+    min-height: 25px;
+
+}
