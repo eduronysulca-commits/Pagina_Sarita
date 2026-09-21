@@ -28,6 +28,11 @@
     >
         ♫
     </button>
+    <!-- MÚSICA -->
+
+<audio id="musica" loop>
+    <source src="mp3.mp3" type="audio/mpeg">
+</audio>
 
 
     <!-- PÉTALOS -->
@@ -35,7 +40,9 @@
     <div id="petalos"></div>
 
 
+    <!-- ================================================== -->
     <!-- PRIMERA PANTALLA -->
+    <!-- ================================================== -->
 
     <section class="pantalla activa">
 
@@ -80,7 +87,10 @@
     </section>
 
 
+
+    <!-- ================================================== -->
     <!-- SEGUNDA PANTALLA -->
+    <!-- ================================================== -->
 
     <section class="pantalla">
 
@@ -116,7 +126,10 @@
     </section>
 
 
+
+    <!-- ================================================== -->
     <!-- TERCERA PANTALLA -->
+    <!-- ================================================== -->
 
     <section class="pantalla">
 
@@ -152,7 +165,10 @@
     </section>
 
 
+
+    <!-- ================================================== -->
     <!-- CUARTA PANTALLA -->
+    <!-- ================================================== -->
 
     <section class="pantalla">
 
@@ -187,7 +203,10 @@
     </section>
 
 
+
+    <!-- ================================================== -->
     <!-- PREGUNTA -->
+    <!-- ================================================== -->
 
     <section class="pantalla">
 
@@ -218,30 +237,93 @@
 
             <div class="botones-respuesta">
 
-    <button
-        class="boton boton-si"
-        onclick="siguientePantalla()"
-    >
-        Sí, quiero 💛
-    </button>
+                <button
+                    class="boton boton-si"
+                    onclick="siguientePantalla()"
+                >
+                    Sí, quiero 💛
+                </button>
 
-    <button
-        class="boton boton-no"
-        onclick="mostrarMensaje()"
-    >
-        Ahora no
-    </button>
 
-</div>
+                <button
+                    class="boton boton-no"
+                    onclick="mostrarMensaje()"
+                >
+                    Ahora no
+                </button>
 
-<p id="respuestaNo" class="respuesta-no"></p>
+            </div>
+
+
+            <p
+                id="respuestaNo"
+                class="respuesta-no"
+            ></p>
 
         </div>
 
     </section>
 
 
-    <!-- MENSAJE FINAL -->
+
+    <!-- ================================================== -->
+    <!-- SEXTA PANTALLA: RECUERDOS -->
+    <!-- ================================================== -->
+
+    <section class="pantalla">
+
+        <div class="contenido tarjeta">
+
+            <div class="pequeno-titulo">
+                UN MOMENTO PARA RECORDAR
+            </div>
+
+
+            <h2>
+                Algunos recuerdos que guardo con cariño ♡
+            </h2>
+
+
+            <!-- GALERÍA DE 2 IMÁGENES -->
+
+            <div class="galeria-recuerdos">
+
+                <img
+                    src="imagen/foto1.jpeg"
+                    alt="Recuerdo especial 1"
+                >
+
+
+                <img
+                    src="imagen/foto2.jpeg"
+                    alt="Recuerdo especial 2"
+                >
+
+            </div>
+
+
+            <p>
+                Hay momentos que merecen quedarse
+                para siempre en la memoria.
+            </p>
+
+
+            <button
+                class="boton"
+                onclick="siguientePantalla()"
+            >
+                Continuar 🌼
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================== -->
+    <!-- SÉPTIMA PANTALLA: MENSAJE FINAL -->
+    <!-- ================================================== -->
 
     <section class="pantalla">
 
@@ -285,6 +367,9 @@
 
     </section>
 
+
+
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
