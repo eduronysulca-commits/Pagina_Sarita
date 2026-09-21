@@ -506,3 +506,19 @@ p {
     min-height: 25px;
 
 }
+.galeria-recuerdos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.galeria-recuerdos img {
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
