@@ -522,3 +522,154 @@ p {
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+/* ================================
+   AJUSTES PARA CELULARES
+================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .pantalla {
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 25px 16px;
+        box-sizing: border-box;
+    }
+
+    .contenido {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 20px 16px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        line-height: 1.25;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* BOTONES */
+
+    .boton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 52px;
+
+        padding: 14px 20px;
+        margin: 12px auto;
+
+        box-sizing: border-box;
+
+        font-size: 1rem;
+        border-radius: 30px;
+
+        position: relative;
+        z-index: 20;
+    }
+
+    .botones-respuesta {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: relative;
+        z-index: 20;
+    }
+
+    .boton-si,
+    .boton-no {
+        width: 100%;
+    }
+
+    /* FOTOS */
+
+    .foto-contenedor {
+        width: 100%;
+        max-width: 100%;
+        margin: 18px auto;
+
+        border-radius: 16px;
+
+        box-sizing: border-box;
+    }
+
+    .foto-recuerdo {
+        width: 100%;
+        height: auto;
+        max-height: 50vh;
+
+        object-fit: contain;
+    }
+
+    /* FLORES */
+
+    .flor {
+        font-size: 2.5rem;
+    }
+
+    /* TÍTULOS */
+
+    .pequeno-titulo {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+
+    /* FLECHA */
+
+    .flecha {
+        bottom: 15px;
+    }
+}
+
+
+/* CELULARES MUY PEQUEÑOS */
+
+@media (max-width: 380px) {
+
+    .pantalla {
+        padding: 18px 12px;
+    }
+
+    .contenido {
+        padding: 16px 12px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .boton {
+        min-height: 50px;
+        font-size: 0.95rem;
+    }
+
+    .foto-recuerdo {
+        max-height: 45vh;
+    }
+}
