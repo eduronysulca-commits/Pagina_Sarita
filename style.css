@@ -522,3 +522,37 @@ p {
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+/* =================================
+   FOTOS RESPONSIVE PARA CELULAR
+================================= */
+
+@media (max-width: 600px) {
+
+    .galeria-recuerdos {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 0 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .galeria-recuerdos img {
+        display: block;
+
+        width: 100% !important;
+        max-width: 280px !important;
+
+        height: auto !important;
+        max-height: 45vh !important;
+
+        object-fit: contain !important;
+
+        margin: 0 auto;
+
+        border-radius: 15px;
+    }
+}
