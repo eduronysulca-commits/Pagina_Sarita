@@ -837,3 +837,52 @@ p {
     }
 
 }
+/* =========================================
+   AJUSTE GENERAL PARA PC
+========================================= */
+
+@media (min-width: 769px) {
+
+    /* Tarjeta de recuerdos */
+    .tarjeta {
+        width: min(900px, 85vw);
+        max-width: 900px;
+        padding: 45px 50px;
+    }
+
+    /* Título */
+    .tarjeta h2 {
+        font-size: 42px;
+        line-height: 1.15;
+    }
+
+    /* Texto */
+    .tarjeta p {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    /* Galería */
+    .galeria-recuerdos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .galeria-recuerdos img {
+        width: 280px;
+        height: 330px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    /* Botón */
+    .tarjeta .boton {
+        font-size: 17px;
+        padding: 14px 30px;
+    }
+
+}
