@@ -815,3 +815,25 @@ p {
     }
 
 }
+/* =========================================
+   FOTOS DE RECUERDOS - PC
+========================================= */
+
+@media (min-width: 769px) {
+
+    .galeria-recuerdos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .galeria-recuerdos img {
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 14px;
+    }
+
+}
