@@ -846,3 +846,12 @@ p {
 .boton-musica:active {
     transform: scale(0.92);
 }
+/* ESTILO SOLO PARA LAS FRASES */
+
+p {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
