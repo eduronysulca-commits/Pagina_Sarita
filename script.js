@@ -75,14 +75,28 @@ for (let i = 0; i < 35; i++) {
 const musica = document.getElementById("musica");
 const botonMusica = document.getElementById("botonMusica");
 
-botonMusica.addEventListener("click", function () {
+window.addEventListener("load", () => {
+
+    musica.volume = 0.5;
+
+    musica.play()
+        .then(() => {
+            botonMusica.textContent = "🔊";
+        })
+        .catch(() => {
+            botonMusica.textContent = "🎵";
+        });
+
+});
+
+botonMusica.addEventListener("click", () => {
 
     if (musica.paused) {
         musica.play();
         botonMusica.textContent = "🔊";
     } else {
         musica.pause();
-        botonMusica.textContent = "♫";
+        botonMusica.textContent = "🎵";
     }
 
 });
