@@ -800,89 +800,49 @@ p {
 
 }
 /* =========================
-   AJUSTE PARA PC
+   BOTÓN DE MÚSICA
 ========================= */
 
-@media (min-width: 769px) {
+.boton-musica {
+    position: fixed;
+    top: 20px;
+    right: 20px;
 
-    .recuerdo img,
-    .imagen-recuerdo,
-    .foto-recuerdo {
-        width: min(70vw, 700px);
-        max-width: 700px;
-        max-height: 60vh;
-        object-fit: contain;
-    }
+    width: 52px;
+    height: 52px;
 
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    background: rgba(255, 193, 7, 0.15);
+    backdrop-filter: blur(10px);
+
+    color: #ffd84d;
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 0 15px rgba(255, 210, 70, 0.25);
+
+    transition: all 0.3s ease;
 }
-/* =========================================
-   FOTOS DE RECUERDOS - PC
-========================================= */
 
-@media (min-width: 769px) {
+.boton-musica:hover {
+    transform: scale(1.1);
 
-    .galeria-recuerdos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-    }
+    background: rgba(255, 193, 7, 0.25);
 
-    .galeria-recuerdos img {
-        width: 250px;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 14px;
-    }
-
+    box-shadow:
+        0 0 25px rgba(255, 210, 70, 0.5);
 }
-/* =========================================
-   AJUSTE GENERAL PARA PC
-========================================= */
 
-@media (min-width: 769px) {
-
-    /* Tarjeta de recuerdos */
-    .tarjeta {
-        width: min(900px, 85vw);
-        max-width: 900px;
-        padding: 45px 50px;
-    }
-
-    /* Título */
-    .tarjeta h2 {
-        font-size: 42px;
-        line-height: 1.15;
-    }
-
-    /* Texto */
-    .tarjeta p {
-        font-size: 19px;
-        line-height: 1.5;
-    }
-
-    /* Galería */
-    .galeria-recuerdos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 22px;
-        width: 100%;
-        margin: 25px 0;
-    }
-
-    .galeria-recuerdos img {
-        width: 280px;
-        height: 330px;
-        object-fit: cover;
-        border-radius: 15px;
-    }
-
-    /* Botón */
-    .tarjeta .boton {
-        font-size: 17px;
-        padding: 14px 30px;
-    }
-
+.boton-musica:active {
+    transform: scale(0.92);
 }
