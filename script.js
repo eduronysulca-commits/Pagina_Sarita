@@ -72,3 +72,19 @@ for (let i = 0; i < 35; i++) {
         "Está bien 🌼";
 
 }
+const musica = document.getElementById("musica");
+const botonMusica = document.getElementById("botonMusica");
+
+botonMusica.addEventListener("click", function () {
+
+    if (musica.paused) {
+        musica.play();
+        botonMusica.textContent = "🔊";
+    } else {
+        musica.pause();
+        botonMusica.textContent = "♫";
+    }
+
+});
+
+
